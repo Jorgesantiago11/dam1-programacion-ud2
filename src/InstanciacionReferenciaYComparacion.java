@@ -8,7 +8,10 @@
 // 3. Muestra por consola ambas canciones con System.out.println().
 // 4. Observa qué valores se imprimen en cada caso.
 // Tu código aquí ↓
+import javax.swing.event.CaretListener;
+
 import utilidades.Cancion;
+import utilidades.Pelicula;
 
 public class InstanciacionReferenciaYComparacion {
     public static void main(String[] args) {
@@ -24,9 +27,9 @@ public class InstanciacionReferenciaYComparacion {
 
         // Tu código aquí ↓
 
-        // Cancion c3 = new Cancion("Ruina", "Hard gz");
-        // Cancion c4 = new Cancion("Ruina", "Hard gz");
-        // System.out.println(c3 == c4);
+        Cancion c3 = new Cancion("Ruina", "Hard gz");
+        Cancion c4 = new Cancion("Ruina", "Hard gz");
+        System.out.println(c3 == c4);
         // ================================
         // EJERCICIO 3: Comparación con equals()
         // ================================
@@ -34,9 +37,6 @@ public class InstanciacionReferenciaYComparacion {
         // imprime el resultado de (c3.equals(c4)).
 
         // Tu código aquí ↓
-        Cancion c3 = new Cancion("Ruina", "Hard gz");
-        Cancion c4 = new Cancion("Ruina", "Hard gz");
-        System.out.println(c3 == c4);
         System.out.println(c3.equals(c4));
 
         // ================================
@@ -48,6 +48,10 @@ public class InstanciacionReferenciaYComparacion {
         // 4. Imprime (p1.equals(p2)).
 
         // Tu código aquí ↓
+        Pelicula p1 = new Pelicula("Cars", 2007);
+        Pelicula p2 = new Pelicula("Cars", 2007);
+        System.out.println(p1 == p2);
+        System.out.println(p1.equals(p2));
 
         // ================================
         // EJERCICIO 5: Referencias
@@ -60,6 +64,11 @@ public class InstanciacionReferenciaYComparacion {
         // 5. Imprime c5 de nuevo.
 
         // Tu código aquí ↓
+        Cancion c5 = new Cancion("Desaparecer", "Mora");
+        Cancion c6 = new Cancion("Desaparecer", "Mora");
+        System.out.println(c5 == c6);
+        c6.setTitutlo("Que habilidad");
+        System.out.println(c5);
 
         // ================================
         // EJERCICIO 6: null
@@ -70,6 +79,16 @@ public class InstanciacionReferenciaYComparacion {
         // Comenta la línea después de probar, porque lanzará un error.
 
         // Tu código aquí ↓
+        Pelicula p3 = null;
+        System.out.println(p3);
+        p3.getTitulo();
+        /*
+         * Exception in thread "main" java.lang.NullPointerException: Cannot invoke
+         * "utilidades.Pelicula.getTitulo()" because "p3" is null
+         * at
+         * InstanciacionReferenciaYComparacion.main(InstanciacionReferenciaYComparacion.
+         * java:86)
+         */
 
     }
 }
@@ -79,23 +98,28 @@ public class InstanciacionReferenciaYComparacion {
 // ================================
 // Ejercicio 1: ¿Qué diferencia hay entre el constructor por defecto y el
 // parametrizado?
-// Respuesta: ...
+// Respuesta: El constructor por defecto crea el objeto sin pedirte datos, y el
+// parametrizado te pide datos para crear el objeto con lo que tú elijas.
 
 // Ejercicio 2: ¿Por qué da false al comparar con == dos objetos con los mismos
 // datos?
-// Respuesta: ...
+// Respuesta: Porque == compara si dos objetos son el mismo en memoria, no si
+// tienen los mismos datos.
 
 // Ejercicio 3: ¿Qué diferencia hay entre == y equals()? ¿Por qué ahora sí
 // devuelve true?
-// Respuesta: ...
+// Respuesta:== compara si dos objetos son el mismo en memoria, mientras que
+// equals() compara si los contenidos de los objetos son iguales, por eso
+// equals() puede devolver true aunque == devuelva false.
 
 // Ejercicio 4: ¿Por qué en Pelicula equals no funciona como en Cancion?
-// Respuesta: ...
+// Respuesta:Porque en cancion se está sobreescribiendo y en pelicula no
 
 // Ejercicio 5: ¿Qué ocurre cuando modificas el objeto a través de c6? ¿Qué
 // demuestra?
-// Respuesta: ...
+// Respuesta:El titulo de c6 cambia, pero al no pintarlo no lo podemos apreciar
 
 // Ejercicio 6: ¿Qué error aparece al acceder a un método de p3 siendo null?
 // ¿Qué significa realmente que una variable valga null?
-// Respuesta: ...
+// Respuesta: -El error que aparece que p3 no existe
+// -Significa que esa variable no existe
