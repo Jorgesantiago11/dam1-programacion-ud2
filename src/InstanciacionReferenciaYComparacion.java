@@ -15,6 +15,7 @@ import utilidades.Pelicula;
 
 public class InstanciacionReferenciaYComparacion {
     public static void main(String[] args) {
+        System.out.println("[Ejercicio 1]");
         Cancion c1 = new Cancion();
         Cancion c2 = new Cancion("Volver", "Miranda");
         System.out.println(c1 == c2);
@@ -26,7 +27,7 @@ public class InstanciacionReferenciaYComparacion {
         // 2. Imprime el resultado de (c3 == c4).
 
         // Tu código aquí ↓
-
+        System.out.println("[Ejercicio 2]");
         Cancion c3 = new Cancion("Ruina", "Hard gz");
         Cancion c4 = new Cancion("Ruina", "Hard gz");
         System.out.println(c3 == c4);
@@ -37,6 +38,7 @@ public class InstanciacionReferenciaYComparacion {
         // imprime el resultado de (c3.equals(c4)).
 
         // Tu código aquí ↓
+        System.out.println("[Ejercicio 3]");
         System.out.println(c3.equals(c4));
 
         // ================================
@@ -48,6 +50,7 @@ public class InstanciacionReferenciaYComparacion {
         // 4. Imprime (p1.equals(p2)).
 
         // Tu código aquí ↓
+        System.out.println("[Ejercicio 4]");
         Pelicula p1 = new Pelicula("Cars", 2007);
         Pelicula p2 = new Pelicula("Cars", 2007);
         System.out.println(p1 == p2);
@@ -64,8 +67,9 @@ public class InstanciacionReferenciaYComparacion {
         // 5. Imprime c5 de nuevo.
 
         // Tu código aquí ↓
+        System.out.println("[Ejercicio 5]");
         Cancion c5 = new Cancion("Desaparecer", "Mora");
-        Cancion c6 = new Cancion("Desaparecer", "Mora");
+        Cancion c6 = c5;
         System.out.println(c5 == c6);
         c6.setTitutlo("Que habilidad");
         System.out.println(c5);
@@ -79,9 +83,10 @@ public class InstanciacionReferenciaYComparacion {
         // Comenta la línea después de probar, porque lanzará un error.
 
         // Tu código aquí ↓
+        System.out.println("[Ejercicio 6]");
         Pelicula p3 = null;
         System.out.println(p3);
-        p3.getTitulo();
+        //p3.getTitulo();
         /*
          * Exception in thread "main" java.lang.NullPointerException: Cannot invoke
          * "utilidades.Pelicula.getTitulo()" because "p3" is null
