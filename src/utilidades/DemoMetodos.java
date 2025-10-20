@@ -1,6 +1,6 @@
 package utilidades;
 
-public class Calculadora {
+public class DemoMetodos {
 
     // Método void (no devuelve nada)
     public void saludar() {
